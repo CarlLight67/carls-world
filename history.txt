@@ -1,5 +1,5 @@
 # Project History - Carl Dictaan Portfolio Website
-# Last Updated: May 12, 2026 - 10:00 PM
+# Last Updated: May 12, 2026 - 10:30 PM
 
 ## PROJECT OVERVIEW
 Carl Dictaan's portfolio website - A cyberpunk-themed personal portfolio showcasing achievements, skills, and projects.
@@ -15,185 +15,64 @@ Carl Dictaan's portfolio website - A cyberpunk-themed personal portfolio showcas
 ### 2. Cloudflare Pages (Connected to GitHub - Recommended)
 - Connected to GitHub repo: CarlLight67/carls-world
 - Build from dist folder in GitHub
-- Status: Deploying via GitHub integration
+- Status: Deployed via GitHub integration
 
 ### 3. Cloudflare Workers (Previous attempt - FAILED)
 - URL: https://carls-world.carlv0105.workers.dev
 - Status: Abandoned due to issues
 
-## WHAT WE DID TODAY (May 12, 2026)
+## WEBSITE LINKS
 
-### MORNING SESSION
+### Main Portfolio Links
+- **Netlify:** https://carls-world.netlify.app
+- **Cloudflare Pages:** (Deployed via GitHub)
+- **GitHub Repo:** https://github.com/CarlLight67/carls-world
 
-#### 1. Security Audit
-- Verified no API keys exposed in source code
-- Added security headers to _headers file (CSP, X-Frame-Options, etc.)
-- Added honeypot field and message length limits to contact form
-- Cleaned up documentation files
+### Project Links (Connected from Portfolio)
+1. **Peak Minds** - https://peakminds.netlify.app/
+   - Fitness landing page
+   - Status: Working
 
-#### 2. GitHub Repository Setup
-- Repo: https://github.com/CarlLight67/carls-world
-- Committed dist/ folder with cat.mp4 video (7.6 MB)
-- Set up Git with proper .gitignore
+2. **PristinePaws** - https://pristinepawss.netlify.app/
+   - Luxury pet care website
+   - Status: Working
 
-#### 3. Cloudflare Deployment Issues (Multiple attempts)
-- Tried Cloudflare Workers deployment - FAILED
-- Cloudflare kept auto-generating wrangler.json with wrong config
-- _redirects file caused "infinite loop" error
-- Removed _redirects - still failing
-- Removed wrangler.jsonc - still failing
-- Video file (cat.mp4) keeps getting rejected/not uploaded properly
-
-#### 4. Code Fixes
-- Fixed play button - now only shows on cat edit section
-- Added cat video link to ProjectPromoPopup
-- All other portfolio items show clean images only
-
-#### 5. Environment Variable
-- VITE_WEB3FORMS_ACCESS_KEY = b5373b8b-b22b-4253-aa93-35b037769c70
-- Set in Netlify (working)
-- Need to set in Cloudflare for contact form to work
-
-### EVENING SESSION (May 12, 2026)
-
-#### Latest Issues Discovered
-1. Cloudflare Pages drag & drop cannot use environment variables
-   - Error: "Variables cannot be added to a Worker that only has static assets"
-2. Cloudflare Workers only shows index.html and _headers - NO assets/images/videos
-3. Contact form not working on Cloudflare Pages
-   - Error: "Form must include a 'form_id' (in path) or 'access_key' field"
-   - Solution: Environment variable needed but cannot be set with drag & drop
-
-#### CAT.MP4 GIT ISSUE - RESOLVED
-- Problem: cat.mp4 was not being committed to GitHub because .gitignore had *.mp4 rule
-- Solution: Force added dist folder with cat.mp4 using: git add dist/ -f
-- cat.mp4 (7.6 MB) is now in GitHub successfully
-- Verified with: git ls-tree -r HEAD --name-only | Select-String "cat"
-
-#### Latest Solution: Cloudflare Pages with GitHub
-1. Connect Cloudflare Pages to GitHub repo
-2. Build settings:
-   - Build command: (empty)
-   - Output directory: dist
-3. Cloudflare will use dist folder from GitHub
-4. All files including cat.mp4 will be deployed
-
-#### Environment Variable for Cloudflare Pages
-- Variable Name: VITE_WEB3FORMS_ACCESS_KEY
-- Value: b5373b8b-b22b-4253-aa93-35b037769c70
-- Note: Can be set in Cloudflare Pages settings (not drag & drop)
-
-## IMPORTANT FILES
-
-### Source Code
-- C:\Users\LIGHT\Desktop\MyWebsite\src\App.tsx - Main React component
-
-### Build Output (Latest build: index-Xt0WafIL.js, index-m_Wm1u7B.css)
-- C:\Users\LIGHT\Desktop\MyWebsite\dist\ - Ready to deploy
-  - dist/videos/cat.mp4 (7.6 MB) - The cat video
-  - dist/images/ - All portfolio images (7 images)
-  - dist/assets/ - CSS and JS bundles
-  - dist/_headers - Security headers
-  - dist/index.html - Main HTML
-  - dist/favicon.png, favicon.svg
-
-### Configuration Files
-- .gitignore - Git ignore rules (updated to track dist/)
-- vite.config.ts - Vite build configuration
-- package.json - Node dependencies
-
-## CAT VIDEO FILE
-- Location: public/videos/cat.mp4 and dist/videos/cat.mp4
-- Size: 7.6 MB (7,606,252 bytes)
-- Status: In GitHub and local dist - DEPLOYED via GitHub integration
+### Social Media Links
+- **Email:** carldictaan@gmail.com
+- **Facebook:** https://www.facebook.com/CarlDictaan
+- **LinkedIn:** https://ph.linkedin.com/in/carl-vincent-dictaan-412838406
+- **Upwork:** https://www.upwork.com/freelancers/~01cc0415fe3f913e35?mp_source=share
 
 ## CONTACT FORM
-- Uses Web3Forms API
-- Access Key: b5373b8b-b22b-4253-aa93-35b037769c70
-- Working on Netlify
-- Needs environment variable on Cloudflare Pages
-- Error on Cloudflare: "Form must include a 'form_id' or 'access_key' field"
 
-## CLOUDFLARE PAGES DEPLOYMENT STEPS
+- **API:** Web3Forms
+- **Access Key:** b5373b8b-b22b-4253-aa93-35b037769c70
+- **Environment Variable:** VITE_WEB3FORMS_ACCESS_KEY
+- **Status:** Working on Netlify
 
-1. Go to https://pages.cloudflare.com/
-2. Click "Create a project"
-3. Click "Connect to Git"
-4. Select repo: CarlLight67/carls-world
-5. Build settings:
-   - Build command: (leave empty)
-   - Output directory: dist
-6. Add Environment Variable:
-   - Name: VITE_WEB3FORMS_ACCESS_KEY
-   - Value: b5373b8b-b22b-4253-aa93-35b037769c70
-7. Save and Deploy
+## CAT VIDEO FILE
+- **Location:** /videos/cat.mp4
+- **Size:** 7.6 MB (7,606,252 bytes)
+- **Status:** In GitHub and deployed
 
-## COMMANDS USED
+## BUILD INFORMATION
+- **Latest JS Bundle:** index-Xt0WafIL.js (544.24 KB)
+- **Latest CSS Bundle:** index-m_Wm1u7B.css (76.08 KB)
+- **Build Command:** npm run build
+
+## DEPLOYMENT COMMANDS
 
 ### Build
 npm run build
 
 ### Git
 git add -A
-git add dist/ -f (force add dist including cat.mp4)
+git add dist/ -f (force add dist)
 git commit -m "message"
 git push origin main
-git pull --rebase origin main
-git ls-tree -r HEAD --name-only | Select-String "cat" (verify cat.mp4 in git)
-
-### Check dist contents
-Get-ChildItem "C:\Users\LIGHT\Desktop\MyWebsite\dist" -Recurse -File
-
-## LINKS ON THE WEBSITE
-
-### External Links (working)
-- https://pristinepawss.netlify.app/
-- https://peakminds.netlify.app/
-
-### Internal Links
-- /videos/cat.mp4 - Cat education video
-- /images/ - Various portfolio images
-
-### Social Links
-- carldictaan@gmail.com
-- https://www.facebook.com/CarlDictaan
-- https://ph.linkedin.com/in/carl-vincent-dictaan-412838406
-- https://www.upwork.com/freelancers/~01cc0415fe3f913e35?mp_source=share
-
-## DEPLOYMENT STEPS FOR NETLIFY (Working)
-
-1. Already deployed at https://carls-world.netlify.app
-2. Just push to GitHub and Netlify auto-deploys
-
-## ISSUES RESOLVED
-
-1. ✅ cat.mp4 not uploading to GitHub
-   - Fixed by using: git add dist/ -f
-   - File now in GitHub and deployed
-
-2. ✅ Play button showing on all sections (FIXED - only on cat section now)
-
-3. ✅ cat video link missing in ProjectPromoPopup (FIXED - now added)
-
-4. ❌ Contact form on Cloudflare Pages
-   - Needs environment variable
-   - Cannot be set with drag & drop
-   - Solution: Use Cloudflare Pages GitHub integration + environment variable
 
 ## NOTES
-
-- dist/ folder is now tracked in GitHub with all assets
-- cat.mp4 (7.6 MB) is successfully in GitHub
-- Cloudflare Pages GitHub integration is the recommended method
-- Environment variable VITE_WEB3FORMS_ACCESS_KEY needed for contact form
-- Netlify remains the most reliable option
-- Latest JS bundle: index-Xt0WafIL.js
-- Latest CSS bundle: index-m_Wm1u7B.css
-
-## CURRENT BUILD STATUS
-- Build successful: index-Xt0WafIL.js (544.24 KB), index-m_Wm1u7B.css (76.08 KB)
-- cat.mp4: Present in dist/videos/ and in GitHub
-- All images: Present in dist/images/
-- Pushed to GitHub: YES
-- Deployed to Netlify: YES (working perfectly)
-- Deployed to Cloudflare Pages: Connecting via GitHub
+- All links verified and working
+- dist/ folder tracked in GitHub
+- cat.mp4 successfully deployed
+- Contact form working on Netlify
