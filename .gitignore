@@ -36,3 +36,7 @@ wrangler.jsonc
 
 # TypeScript cache
 *.tsbuildinfo
+
+.dev.vars*
+!.dev.vars.example
+!.env.example
