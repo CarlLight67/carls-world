@@ -1,11 +1,36 @@
+# Dependencies
 node_modules/
-build/
+
+# Build output
 dist/
-coverage/
-.DS_Store
+build/
+
+# Environment files (keep .env.example only)
+.env
+.env.local
+.env.*.local
+
+# Logs
 *.log
-.env*
-!.env.example
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large media files (keep links in code, but don't commit actual files)
+*.mp4
+*.mov
+*.avi
+*.webm
+*.zip
+*.tar
+*.gz
 
 # Local Netlify folder
 .netlify
+
+# Vite cache
+.vite/
+
+# TypeScript cache
+*.tsbuildinfo
