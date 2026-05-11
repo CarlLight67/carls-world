@@ -608,6 +608,18 @@ const ProjectPromoPopup = React.memo(({ isOpen, onClose, onPlayVideo }: { isOpen
                     type="Luxury Pet Care"
                   />
                   <ProjectLink 
+                    onClick={(e) => { 
+                      e.preventDefault(); 
+                      if (onPlayVideo) onPlayVideo("/videos/cat.mp4");
+                      else window.dispatchEvent(new CustomEvent('scroll-to-section', { detail: '#portfolio' }));
+                      onClose(); 
+                    }}
+                    icon={<Play size={16} className="text-red-400" />}
+                    label="Cat Edit Video"
+                    type="Creative Motion"
+                    isSecondary
+                  />
+                  <ProjectLink 
                     href="https://peakminds.netlify.app/"
                     icon={<Zap size={16} className="text-orange-400" />}
                     label="Peak Minds"
