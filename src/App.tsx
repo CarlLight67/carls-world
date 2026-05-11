@@ -474,19 +474,21 @@ function ParallaxItem({ achievement, index, onPlayVideo }: { achievement: Achiev
               className="w-full h-full object-cover transition-all duration-1000 scale-105 group-hover:scale-110"
             />
 
-            <div className="absolute inset-0 flex items-center justify-center z-10 transition-opacity duration-500">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="w-20 h-20 sm:w-28 sm:h-28 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 shadow-[0_0_50px_rgba(0,0,0,0.3)] group/play"
-              >
-                <div className="w-16 h-16 sm:w-22 sm:h-22 bg-accent-blue rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(0,210,255,0.5)] transition-all duration-500 group-hover/play:bg-white group-hover/play:shadow-[0_0_40px_white]">
-                   <Play className="text-bg-deep fill-bg-deep translate-x-1" size={40} />
-                </div>
-              </motion.div>
-            </div>
+            {achievement.title === "entertainment video of cat edit" && (
+              <div className="absolute inset-0 flex items-center justify-center z-10 transition-opacity duration-500">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="w-20 h-20 sm:w-28 sm:h-28 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 shadow-[0_0_50px_rgba(0,0,0,0.3)] group/play"
+                >
+                  <div className="w-16 h-16 sm:w-22 sm:h-22 bg-accent-blue rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(0,210,255,0.5)] transition-all duration-500 group-hover/play:bg-white group-hover/play:shadow-[0_0_40px_white]">
+                     <Play className="text-bg-deep fill-bg-deep translate-x-1" size={40} />
+                  </div>
+                </motion.div>
+              </div>
+            )}
           </motion.div>
           
           {/* Decorative frame elements that move independently */}
