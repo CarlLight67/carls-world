@@ -14,7 +14,7 @@ When setting up your project on Cloudflare Pages:
 ### Environment Variables
 | Variable Name | Value |
 |--------------|-------|
-| `VITE_WEB3FORMS_ACCESS_KEY` | `b5373b8b-b22b-4253-aa93-35b037769c70` |
+| `VITE_WEB3FORMS_ACCESS_KEY` | (set in Cloudflare environment variables) |
 
 ## Features Included
 
