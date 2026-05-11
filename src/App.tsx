@@ -417,12 +417,10 @@ function ParallaxItem({ achievement, index, onPlayVideo }: { achievement: Achiev
           style={{ opacity, x: textX, y }}
           className={`z-20 text-center lg:text-left ${isEven ? 'lg:order-1' : 'lg:order-2'} will-change-transform transform-gpu`}
         >
-          {achievement.title !== "entertainment video of cat edit" && (
-            <div className="inline-flex items-center gap-4 py-2 px-6 bg-white/5 rounded-full border border-white/10 mb-8 backdrop-blur-md">
-              <span className="text-accent-blue opacity-80">{achievement.icon}</span>
-              <span className="text-[11px] font-bold tracking-[0.3em] text-white uppercase">{achievement.year}</span>
-            </div>
-          )}
+          <div className="inline-flex items-center gap-4 py-2 px-6 bg-white/5 rounded-full border border-white/10 mb-8 backdrop-blur-md">
+            <span className="text-accent-blue opacity-80">{achievement.icon}</span>
+            <span className="text-[11px] font-bold tracking-[0.3em] text-white uppercase">{achievement.year}</span>
+          </div>
           <h4 className="text-4xl md:text-7xl font-display font-black mb-8 leading-tight tracking-tight italic">
             {achievement.title}
           </h4>
@@ -476,23 +474,19 @@ function ParallaxItem({ achievement, index, onPlayVideo }: { achievement: Achiev
               className="w-full h-full object-cover transition-all duration-1000 scale-105 group-hover:scale-110"
             />
 
-            {/* Video Play Button Overlay for the specific cat edit video */}
-            {achievement.title === "entertainment video of cat edit" && (
-              <div className="absolute inset-0 flex items-center justify-center z-10 transition-opacity duration-500">
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  className="w-20 h-20 sm:w-28 sm:h-28 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 shadow-[0_0_50px_rgba(0,0,0,0.3)] group/play"
-                >
-                  <div className="w-16 h-16 sm:w-22 sm:h-22 bg-accent-blue rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(0,210,255,0.5)] transition-all duration-500 group-hover/play:bg-white group-hover/play:shadow-[0_0_40px_white]">
-                     <Play className="text-bg-deep fill-bg-deep translate-x-1" size={40} />
-                  </div>
-                </motion.div>
-              </div>
-            )}
-            
+            <div className="absolute inset-0 flex items-center justify-center z-10 transition-opacity duration-500">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="w-20 h-20 sm:w-28 sm:h-28 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 shadow-[0_0_50px_rgba(0,0,0,0.3)] group/play"
+              >
+                <div className="w-16 h-16 sm:w-22 sm:h-22 bg-accent-blue rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(0,210,255,0.5)] transition-all duration-500 group-hover/play:bg-white group-hover/play:shadow-[0_0_40px_white]">
+                   <Play className="text-bg-deep fill-bg-deep translate-x-1" size={40} />
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
           
           {/* Decorative frame elements that move independently */}
@@ -617,18 +611,7 @@ const ProjectPromoPopup = React.memo(({ isOpen, onClose, onPlayVideo }: { isOpen
                     label="Peak Minds"
                     type="Fitness Ecosystem"
                   />
-                  <ProjectLink 
-                    onClick={(e) => { 
-                      e.preventDefault(); 
-                      if (onPlayVideo) onPlayVideo("/videos/cat.mp4");
-                      else window.dispatchEvent(new CustomEvent('scroll-to-section', { detail: '#portfolio' }));
-                      onClose(); 
-                    }}
-                    icon={<Play size={16} className="text-red-400" />}
-                    label="Cat Edit Video"
-                    type="Creative Motion"
-                    isSecondary
-                  />
+                  
                 </div>
                 
                 <div className="pt-10 border-t border-white/5 w-full">

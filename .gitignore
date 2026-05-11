@@ -2,8 +2,9 @@
 node_modules/
 
 # Build output
-dist/
-build/
+# dist/ is now tracked — it contains the pre-built site for Cloudflare Workers deployment
+# This ensures cat.mp4 and all assets are uploaded, not re-built from scratch
+# build/
 
 # Environment files (keep .env.example only)
 .env
@@ -26,8 +27,9 @@ Thumbs.db
 *.tar
 *.gz
 
-# Local Netlify folder
-.netlify
+# Cloudflare
+.wrangler/
+wrangler.jsonc
 
 # Vite cache
 .vite/
