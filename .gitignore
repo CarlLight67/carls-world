@@ -29,7 +29,6 @@ Thumbs.db
 
 # Cloudflare
 .wrangler/
-wrangler.jsonc
 
 # Vite cache
 .vite/

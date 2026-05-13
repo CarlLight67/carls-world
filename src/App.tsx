@@ -138,7 +138,7 @@ const ACHIEVEMENTS: Achievement[] = [
     desc: "A high-energy fitness landing page built to inspire motivation and action. This powerful platform turns inspiration into real results through impactful design, bold typography, and a structured layout that effectively captures attention.",
     icon: <Zap className="text-orange-400" />,
     image: "/images/regenerated_image_1778438973804.png",
-    link: "https://peakminds.netlify.app/"
+    link: "https://peakmind-coaching.carlv0105.workers.dev/"
   },
   {
     title: "entertainment video of cat edit",
@@ -154,7 +154,7 @@ const ACHIEVEMENTS: Achievement[] = [
     desc: "A high-end digital sanctuary for pets. pristinepaws offers luxury grooming, holistic boarding, and mindful pet care services for your beloved companions.",
     icon: <Heart className="text-emerald-400" />,
     image: "/images/regenerated_image_1778438972567.png",
-    link: "https://pristinepawss.netlify.app/"
+    link: "https://pristinepaws.carlv0105.workers.dev/"
   }
 ];
 
@@ -602,7 +602,7 @@ const ProjectPromoPopup = React.memo(({ isOpen, onClose, onPlayVideo }: { isOpen
                 
                 <div className="flex flex-col gap-3.5 mb-12 w-full">
                   <ProjectLink 
-                    href="https://pristinepawss.netlify.app/"
+                    href="https://pristinepaws.carlv0105.workers.dev/"
                     icon={<Heart size={16} className="text-emerald-400" />}
                     label="PristinePaws"
                     type="Luxury Pet Care"
@@ -620,7 +620,7 @@ const ProjectPromoPopup = React.memo(({ isOpen, onClose, onPlayVideo }: { isOpen
                     isSecondary
                   />
                   <ProjectLink 
-                    href="https://peakminds.netlify.app/"
+                    href="https://peakmind-coaching.carlv0105.workers.dev/"
                     icon={<Zap size={16} className="text-orange-400" />}
                     label="Peak Minds"
                     type="Fitness Ecosystem"
