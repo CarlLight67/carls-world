@@ -2,6 +2,8 @@
   "name": "carls-world",
   "compatibility_date": "2026-05-13",
   "assets": {
-    "directory": "dist"
+    "directory": "./dist",
+    "include": ["**/*"],
+    "exclude": ["_redirects"]
   }
 }
