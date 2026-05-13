@@ -36,3 +36,8 @@ wrangler.jsonc
 
 # TypeScript cache
 *.tsbuildinfo
+
+# Project-specific (local only)
+history.txt
+entities.json
+metadata.json
